@@ -62,3 +62,24 @@ console.log(fibonacciOfNTerm(1));
 console.log(fibonacciOfNTerm(6));
 
 //!------------------------------------------------------
+
+//* Check if a number is palindrome.
+
+function isPalindrome(num) {
+  let temp = num;
+  let reverse = 0;
+  while (temp > 0) {
+    let lastdigit = temp % 10;
+    reverse = reverse * 10 + lastdigit;
+    temp = Math.floor(temp / 10);
+  }
+  console.log(num, reverse);
+  return reverse == num;
+}
+console.log(isPalindrome(121));
+console.log(isPalindrome(12134));
+console.log(isPalindrome(123321));
+console.log(isPalindrome(13461));
+
+//!------------------------------------------------------
+
