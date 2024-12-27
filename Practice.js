@@ -83,3 +83,43 @@ console.log(isPalindrome(13461));
 
 //!------------------------------------------------------
 
+//* Check if a number is prime.(Time Complexity and Algorithms).
+//? A number is only divisible by 1 and itself.This is called Prime Number.
+
+function isPrime(num) {
+  console.log(num);
+  //* One Method but time complexity is more:
+  //   let conut = 0;
+  //   for (let i = 2; i < num; i++) {
+  //       count++;
+  //     if (num % i == 0) {
+  //       return false;
+  //     }
+  //   }
+  //   return true;
+
+  //* Reduce the number of itertion:
+  //   let count = 0;
+  //   for (let i = 2; i < num/2; i++) {
+  //     count++;
+  //     if (num % i == 0) {
+  //       return false;
+  //     }
+  //   }
+  //   return [true,count];
+
+  //* Remove the square of the i value:
+  let count = 0;
+  for (let i = 2; i * i < num; i++) {
+    count++;
+    if (num % i == 0) {
+      return [false,count];
+    }
+  }
+  return [true, count];
+}
+console.log(isPrime(101));
+console.log(isPrime(19));
+console.log(isPrime(8));
+console.log(isPrime(16));
+console.log(isPrime(23));
