@@ -6,3 +6,4 @@
 4. Check if a number is prime.(Time Complexity and Algorithms).
 5. Print Hollow Square Pattern.
 6. Print a right angled trianglepattern of asterisks.
+7. Find the LCM of two numbers.
