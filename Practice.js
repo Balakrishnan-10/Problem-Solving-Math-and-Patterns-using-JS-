@@ -109,11 +109,22 @@ function isPrime(num) {
   //   return [true,count];
 
   //* Remove the square of the i value:
+  //   let count = 0;
+  //   for (let i = 2; i * i < num; i++) {
+  //     count++;
+  //     if (num % i == 0) {
+  //       return [false,count];
+  //     }
+  //   }
+  //   return [true, count];
+
   let count = 0;
-  for (let i = 2; i * i < num; i++) {
+  if (num == 2) return [true, count];
+  if (num % 2 == 0) return [true, count];
+  for (let i = 3; i * i <= num; i += 2) {
     count++;
     if (num % i == 0) {
-      return [false,count];
+      return [false, count];
     }
   }
   return [true, count];
@@ -123,3 +134,28 @@ console.log(isPrime(19));
 console.log(isPrime(8));
 console.log(isPrime(16));
 console.log(isPrime(23));
+
+//!------------------------------------------------------
+
+//* Print Hollow Square Pattern:
+function hollowSquare(num) {
+  //console.log(num);
+  const pattern = [];
+  for (let row = 0; row < num; row++) {
+    const rowValues = [];
+    for (let col = 0; col < num; col++) {
+      if (row == 0 || col == 0 || row == num - 1 || col == num - 1) {
+        rowValues.push("*");
+      } else {
+        rowValues.push(" ");
+      }
+    }
+    pattern.push(rowValues.join(" "));
+  }
+  console.log(pattern.join("\n"));
+}
+hollowSquare(10);
+
+//!------------------------------------------------------
+
+
