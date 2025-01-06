@@ -5,3 +5,4 @@
 3. Check if a number is palindrome.
 4. Check if a number is prime.(Time Complexity and Algorithms).
 5. Print Hollow Square Pattern.
+6. Print a right angled trianglepattern of asterisks:

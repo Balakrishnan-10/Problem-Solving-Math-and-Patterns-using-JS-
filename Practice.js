@@ -158,4 +158,18 @@ hollowSquare(10);
 
 //!------------------------------------------------------
 
+//* Print a right angled trianglepattern of asterisks:
+function rightAngleTriangle(num) {
+  //console.log(num);
+  for (let row = 0; row < num; row++) {
+    const rowValues = [];
+    for (let col = 0; col <= row; col++) {
+      rowValues.push("*");
+    }
+    console.log(rowValues.join(" "));
+  }
+}
+rightAngleTriangle(10);
+
+//!------------------------------------------------------
 
