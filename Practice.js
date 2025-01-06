@@ -171,5 +171,47 @@ function rightAngleTriangle(num) {
 }
 rightAngleTriangle(10);
 
-//!------------------------------------------------------
+// function rightAngleTriangle(num) {
+   //console.log(num);
+//   for (let row = 0; row < num; row++) {
+//     const rowValues = [];
+//     for (let col = 0; col < num; col++) {
+//       if (row > col) {
+//         rowValues.push(" ");
+//       } else rowValues.push("*");
+//     }
+//     console.log(rowValues.join(" "));
+//   }
+// }
+// rightAngleTriangle(10);
 
+// function rightAngleTriangle(num) {
+//    console.log(num);
+//   for (let row = 0; row < num; row++) {
+//     const rowValues = [];
+//     for (let col = 0; col < num; col++) {
+//       if (num-1-col < row) {
+//         rowValues.push(" ");
+//       } else rowValues.push("*");
+//     }
+//     console.log(rowValues.join(" "));
+//   }
+// }
+// rightAngleTriangle(10);
+
+function rightAngleTriangle(num) {
+   console.log(num);
+  for (let row = 0; row < num; row++) {
+    const rowValues = [];
+    for (let col = 0; col < num; col++) {
+      if (num-1-col > row) {
+        rowValues.push(" ");
+      } else rowValues.push("*");
+    }
+    console.log(rowValues.join(" "));
+  }
+}
+rightAngleTriangle(10);
+
+
+//!------------------------------------------------------
